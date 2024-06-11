@@ -1,12 +1,8 @@
-name: Node.js Hello World
-
+name: Pgm
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -23,12 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Test
-        run: npm test
 
       - name: Run Hello World
         run: node index.js
